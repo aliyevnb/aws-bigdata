@@ -2,8 +2,8 @@ from __future__ import print_function
 import boto3
 import json
 
-DDBT_REPLICA = 'moviedata-replica'
-client = boto3.client('dynamodb', region_name = 'us-east-2')
+DDBT_REPLICA = '[replica-table]'
+client = boto3.client('dynamodb', region_name = '[aws-region]')
 
 def lambda_handler(event, context):
     for record in event['Records']:
